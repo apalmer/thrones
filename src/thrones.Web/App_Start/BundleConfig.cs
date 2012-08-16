@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace SevenThrones.Web
+namespace thrones.Web
 {
     public class BundleConfig
     {

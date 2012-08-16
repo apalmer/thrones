@@ -4,3 +4,4 @@
 /// <reference path="jquery/unobtrusive/jquery.validate.unobtrusive.js" />
 /// <reference path="knockout/knockout-2.0.0.debug.js" />
 /// <reference path="modernizr/modernizr-2.0.6-development-only.js" />
+/// <reference path="qunit/qunit.js" />

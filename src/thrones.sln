@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenThrones.Web", "SevenThrones.Web\SevenThrones.Web.csproj", "{AC9A8783-7526-4AFF-AD0B-083347828122}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thrones.Web", "thrones.Web\thrones.Web.csproj", "{AC9A8783-7526-4AFF-AD0B-083347828122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

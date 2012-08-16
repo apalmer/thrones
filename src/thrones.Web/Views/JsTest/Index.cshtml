@@ -1,0 +1,13 @@
+﻿@model thrones.Web.Models.JsTestModel
+<div id="js-test-container">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Styles/qunit.css")">
+    <div id="qunit"></div>
+    <script src="@Url.Content("~/Scripts/lib/qunit/qunit.js")"></script>
+    @foreach(var testScript in Model.TestScripts){
+    <script src="@Url.Content(testScript)"></script>
+    }
+    <script type="text/javascript">
+        QUnit.init();
+        QUnit.start();
+    </script>
+</div>

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace SevenThrones.Web
+namespace thrones.Web
 {
     public class FilterConfig
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SevenThrones.Web.Controllers
+namespace thrones.Web.Controllers
 {
     public class BackboneController : Controller
     {
