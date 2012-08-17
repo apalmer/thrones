@@ -14,7 +14,8 @@ namespace thrones.Web.Controllers
 
         public ActionResult Index(String url)
         {
-            var model = new JsTestModel();
+            var safeUrl = Uri.UnescapeDataString(url).ToLower();
+            var model = new JsTestModel(safeUrl);
             return PartialView(model);
         }
 

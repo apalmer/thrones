@@ -43,7 +43,10 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -128,16 +131,40 @@
     <Compile Include="Controllers\BackboneController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JsTestController.cs" />
+    <Compile Include="Controllers\VanillaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\JsTestModel.cs" />
+    <Compile Include="Persistence\Competitor.cs">
+      <DependentUpon>thronesDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Match.cs">
+      <DependentUpon>thronesDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\thronesDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thronesDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\thronesDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thronesDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\thronesDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thronesDB.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\thrones.sdf" />
     <Content Include="Content\Styles\qunit.css" />
     <Content Include="Scripts\app\backbone\app.js" />
     <Content Include="Scripts\app\thrones.js" />
+    <Content Include="Scripts\app\vanilla\app.js" />
     <Content Include="Scripts\lib\qunit\qunit.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -168,6 +195,23 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Persistence\thronesDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>thronesDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Persistence\thronesDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>thronesDB.edmx</DependentUpon>
+      <LastGenOutput>thronesDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Persistence\thronesDB.edmx.diagram">
+      <DependentUpon>thronesDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Persistence\thronesDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>thronesDB.edmx</DependentUpon>
+      <LastGenOutput>thronesDB.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\lib\jquery\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\lib\backbone\backbone.js" />
     <Content Include="Scripts\lib\backbone\underscore.js" />
@@ -197,6 +241,7 @@
     <Content Include="Scripts\lib\modernizr\modernizr-2.0.6-development-only.js" />
     <Content Include="Scripts\tests\backbone\app.js" />
     <Content Include="Scripts\tests\thrones.js" />
+    <Content Include="Scripts\tests\vanilla\app.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -212,14 +257,17 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\JsTest\Index.cshtml" />
     <Content Include="Views\Backbone\Index.cshtml" />
+    <Content Include="Views\Vanilla\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

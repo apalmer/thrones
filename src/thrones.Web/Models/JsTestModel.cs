@@ -9,11 +9,24 @@ namespace thrones.Web.Models
     {
         public List<String> TestScripts { get; set; }
 
-        public JsTestModel()
+        public JsTestModel(String urlUnderTest)
         {
             TestScripts = new List<String>();
+
+            //Test Baseline Functionality
             TestScripts.Add("~/Scripts/tests/thrones.js");
-            TestScripts.Add("~/Scripts/tests/backbone/app.js");
+
+            switch (urlUnderTest)
+            {
+                case "/thrones/vanilla":
+                    TestScripts.Add("~/Scripts/tests/vanilla/app.js");
+                    break;
+                case "/thrones/backbone":
+                    TestScripts.Add("~/Scripts/tests/backbone/app.js");
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

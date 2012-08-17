@@ -6,11 +6,15 @@ using System.Web.Mvc;
 
 namespace thrones.Web.Controllers
 {
-    public class HomeController : Controller
+    public class VanillaController : Controller
     {
+        //
+        // GET: /Vanilla/
+
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "Vanilla");
+            return View();
         }
+
     }
 }
