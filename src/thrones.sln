@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thrones.Web", "thrones.Web\thrones.Web.csproj", "{AC9A8783-7526-4AFF-AD0B-083347828122}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thrones.web", "thrones.web\thrones.web.csproj", "{E6A24A18-B761-49E0-99F0-2C0DB4A49256}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AC9A8783-7526-4AFF-AD0B-083347828122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC9A8783-7526-4AFF-AD0B-083347828122}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC9A8783-7526-4AFF-AD0B-083347828122}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC9A8783-7526-4AFF-AD0B-083347828122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A24A18-B761-49E0-99F0-2C0DB4A49256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A24A18-B761-49E0-99F0-2C0DB4A49256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A24A18-B761-49E0-99F0-2C0DB4A49256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A24A18-B761-49E0-99F0-2C0DB4A49256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E5BDCAD-364C-4557-B77B-98F02BEBA953}
 	EndGlobalSection
 EndGlobal
